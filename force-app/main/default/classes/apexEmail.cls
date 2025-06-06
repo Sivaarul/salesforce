@@ -14,7 +14,7 @@ public class apexEmail
            {
                 conid.add(con.id);
            }
-          system.debug(conid);
-          system.debug(oldcontact);
+          //system.debug(conid);
+          //system.debug(oldcontact);
       }
 }
