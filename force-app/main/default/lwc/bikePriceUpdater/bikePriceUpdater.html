@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Bike Info">
+
+            <template lwc:if={bikeResultFields} >
+                <p><strong>Name:</strong> {bikeResultFields.Name.value}</p>
+                <p><strong>Rate:</strong> {bikeResultFields.Rate__c.value}</p>
+
+                <lightning-button
+                    label="Update Price"
+                    variant="brand"
+                    onclick={handleUpdatePrice}
+                    disabled={isLoading}
+                    class="slds-m-top_medium">
+                </lightning-button>
+
+            </template>
+         
+    </lightning-card>
+</template>

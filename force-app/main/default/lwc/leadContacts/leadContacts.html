@@ -1,0 +1,17 @@
+<template>
+    
+    <lightning-card title="AllContacts">
+        <lightning-button label="Get All Contacts" onclick={HandleClick}></lightning-button>
+        <template lwc:if={isLoading}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+        <tempalte lwc:if={contacts}>
+            <lightning-datatable
+                    key-field="Id"
+                    data={contacts}
+                    columns={columns}
+                        hide-checkbox-column>
+                </lightning-datatable>
+        </tempalte>
+    </lightning-card>
+</template>

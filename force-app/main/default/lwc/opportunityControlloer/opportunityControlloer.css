@@ -1,0 +1,15 @@
+
+
+.table-wrapper{
+    width:100%;
+}
+
+.full-table{
+    width:100%;
+    table-layout: fixed;
+}
+
+th, td{
+    width: 250px;
+    vertical-align: top;
+}

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Contact Information">
+
+        <div class="slds-p-around_medium">
+
+            <!-- Success State -->
+            <template lwc:if={contactFields}>
+                <p><strong>Name:</strong> {contactFields.fields.Name.value}</p>
+                <p><strong>Email:</strong> {contactFields.fields.Email.value}</p>
+                <p><strong>Phone:</strong> {contactFields.fields.Phone.value}</p>
+            </template>
+
+            <!-- Error State -->
+            <template lwc:if={hasError}>
+                <p class="slds-text-color_error">
+                    Error loading contact details.
+                </p>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

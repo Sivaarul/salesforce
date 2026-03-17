@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Lifecycle Debugger" icon-name="custom:custom14">
+
+     <lightning-button 
+        label={buttonLabel} 
+        onclick={toggleChild}>
+    </lightning-button>
+
+    <template if:true={showChild}>
+        <c-child-demo></c-child-demo>
+    </template>
+   
+
+    </lightning-card>
+    
+</template>

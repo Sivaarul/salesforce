@@ -1,0 +1,36 @@
+<template>
+    <div class="card-wrapper">
+        <div class="slds-p-around_medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered full-table">
+
+                <!-- Header -->
+                <thead>
+                    <tr>
+                        <template for:each={stageData} for:item="stage">
+                            <th key={stage.stage}>{stage.stage}</th>
+                        </template>
+                    </tr>
+                </thead>
+
+                <!-- Body -->
+                <tbody>
+                    <template for:each={tableRows} for:item="row">
+                        <tr key={row.id}>
+                            <template for:each={row.cells} for:item="cell">
+                                <td key={cell}>
+                                    <template if:true={cell}>
+                                        <div class="slds-p-vertical_x-small">
+                                            {cell}
+                                        </div>
+                                    </template>
+                                </td>
+                            </template>
+                        </tr>
+                    </template>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</template>

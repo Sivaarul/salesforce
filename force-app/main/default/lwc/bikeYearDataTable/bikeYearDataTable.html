@@ -1,0 +1,24 @@
+<template>
+     <lightning-card title="Bike Selector">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="bike"
+                label="Select Year"
+                value={selectedBike}
+                placeholder="Choose a year"
+                options={bikeOptions}
+                onchange={handleChange}>
+        </lightning-combobox>
+
+              <template lwc:if={ShowTable}>
+                    <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    columns={columns}
+                        hide-checkbox-column>
+                </lightning-datatable>
+    </template>
+
+        </div>
+    </lightning-card>
+</template>
